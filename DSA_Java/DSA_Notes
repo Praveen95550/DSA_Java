@@ -1,0 +1,25 @@
+
+Notes:
+
+Stability:
+Stable algorithms maintain the relative order of equal elements (e.g., Merge Sort, Counting Sort, Radix Sort, Tim Sort).
+
+In-place Sorting:
+In-place algorithms use minimal extra memory (e.g., Quick Sort, Heap Sort, Insertion Sort).
+Non-in-place algorithms require additional space (e.g., Merge Sort, Counting Sort).
+
+When to Use Which Sorting Algorithm:
+------------------------------------
+Small Datasets:
+Use Insertion Sort or Bubble Sort for simplicity.
+Large Datasets:
+Use Quick Sort or Merge Sort for efficiency.
+Use Heap Sort for in-place sorting.
+Nearly Sorted Data:
+Use Insertion Sort or Tim Sort.
+Limited Range of Integers:
+Use Counting Sort or Radix Sort.
+Stable Sorting Needed:
+Use Merge Sort, Counting Sort, or Tim Sort.
+Memory Constraints:
+Use Quick Sort, Heap Sort, or Shell Sort.
