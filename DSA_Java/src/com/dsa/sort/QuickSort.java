@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class QuickSort {
 
 	public static void main(String[] args) {
-		int arr[] = { 8, 5, 9, 1, 6, 7 };
+		int arr[] = { 5,8, 9, 1, 6, 7 };
 		quickSort(arr, 0, arr.length - 1);
 		System.out.println(Arrays.toString(arr));
 	}
@@ -22,7 +22,7 @@ public class QuickSort {
 		int pivot = arr[l];
 		int start = l, end = r;
 		while (start < end) {
-			while (arr[start] <= pivot) {
+			while (start < end && arr[start] <= pivot) {
 				start++;
 			}
 			while (arr[end] > pivot) {
@@ -32,7 +32,9 @@ public class QuickSort {
 				swap(arr, start, end);
 			}
 		}
+		System.out.println("before pivot swap"+Arrays.toString(arr));
 		swap(arr, l, end); // swapping the pivot element not start
+		System.out.println(Arrays.toString(arr));
 		return end;
 	}
 
