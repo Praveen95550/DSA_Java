@@ -1,0 +1,102 @@
+Questions to Use All Stream Operations
+
+Intermediate Operations:
+
+filter()
+Find all employees who are older than 30 years of age.
+
+map()
+Create a list of all employee names from the list of employees.
+
+peek() - mainly used for debugging, especially in long processing pipelines where you want to monitor the flow of data.
+Print the details of all employees before applying any filtering operations.
+
+skip()
+Skip the first 3 employees in the list and process the rest.
+
+flatMap()
+Given that each employee is associated with a list of projects (let's assume each employee has a List<String> projects), flatten the list of projects for all employees.
+
+limit()
+Retrieve the first 2 employees in the list.
+
+distinct()
+Find all unique employees by name, removing duplicates based on the employee's name.
+
+
+Terminal Operations:
+
+collect()
+Collect all employees into a List<Employee> where the salary is greater than 1500.
+
+count()
+Count the number of employees whose age is greater than 25.
+
+sorted()
+Sort all employees by their age in ascending order.
+
+min() / max()
+Find the employee with the lowest salary and the one with the highest salary.
+
+forEach()
+Print all the details of employees whose salary is greater than 1000.
+
+toArray()
+Convert the list of employees into an array.
+
+anyMatch(), allMatch(), noneMatch()
+Check if there is any employee whose age is greater than 40.
+Check if all employees earn more than 1000 in salary.
+Check if no employee has a salary less than 500.
+
+reduce()
+Calculate the total salary of all employees using the reduce() method.
+
+findFirst()
+Find the first employee who has a salary greater than 1200.
+
+findAny()
+Find any employee who is younger than 30 years of age.
+
+of()
+Create a stream of employees with the names "Eve" and "Frank" and print them.
+
+
+Additional (Java 9+) Operations:
+
+takeWhile()
+Take all employees from the list whose age is less than or equal to 30.
+
+dropWhile()
+Drop all employees whose age is less than or equal to 30 and print the remaining employees.
+
+concat()
+Concatenate two streams of employees and print the combined result.
+
+unordered()
+Process the stream of employees in parallel and print them, ignoring the order.
+
+Bonus (For a more complex challenge):
+
+filter(), map(), sorted()
+Filter employees whose age is greater than 25, map them to their names, and then sort them by name in alphabetical order.
+flatMap()
+
+Given a stream of employees, each having a list of departments they are associated with, flatten the list to show all unique departments across all employees.
+
+Advanced Combined Questions:
+
+Using multiple operations together:
+Find the names of all employees whose salary is greater than 1500, older than 25, sorted by age in ascending order, and then print them.
+
+Using reduce() for complex operations:
+Find the employee with the highest salary using reduce(), and print their details.
+
+Using anyMatch() with filter() and map():
+Check if there is any employee who has a project starting with "A" (using filter() and map()).
+
+Using groupingBy() (for categorization) combined with filter(), count():
+Group employees by their age group (e.g., < 25, 25-30, >30) and count how many employees fall into each category.
+
+Using min(), max(), and collect():
+Find the employee with the highest salary, find the one with the lowest salary, and collect all employees into a List<Employee> whose age is greater than 30.
